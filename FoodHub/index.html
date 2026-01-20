@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodHub - Delicious Food Delivered to You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <h1 class="logo">FoodHub</h1>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#categories">Menu</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div id="dark-mode-toggle">🌙</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- New Modern Hero Section -->
+<section id="hero" class="hero-modern">
+    <div class="container hero-container">
+        <div class="hero-left">
+            <h1>
+                Delicious<br>
+                <span class="highlight">Food</span><br>
+                Delivered to<br>
+                <span class="highlight">You</span>
+            </h1>
+            <p class="subtitle">
+                Experience the finest culinary delights delivered fresh to your doorstep. 
+                From traditional favorites to innovative dishes, we bring restaurant quality food to your home.
+            </p>
+            <div class="cta-buttons">
+                <a href="#popular" class="cta-btn primary">Order Now</a>
+                <a href="#categories" class="cta-btn secondary">View Menu</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="image-box">
+                <!-- Yahan tumhari image daal do – images folder se -->
+                <img src="images/hero-image.jpeg" alt="Food Icon">
+                <!-- Agar pizza triangle icon hai to uska naam change kar do, jaise images/pizza-triangle.png -->
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Food Categories Module -->
+    <section id="categories" class="section">
+        <div class="container">
+            <h2>Food Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="fast-food">
+                    <img src="images/fastfood1.jpeg" alt="Fast Food">
+                    <h3>🍔 Fast Food</h3>
+                </div>
+                <div class="category-card" data-category="bakery">
+                    <img src="images/bakery.jpeg" alt="Bakery & Desserts">
+                    <h3>🍰 Bakery & Desserts</h3>
+                </div>
+                <div class="category-card" data-category="drinks">
+                    <img src="images/drinks1.jpeg" alt="Drinks">
+                    <h3>🥤 Drinks</h3>
+                </div>
+                <div class="category-card" data-category="healthy">
+                    <img src="images/healthy 3.png" alt="Healthy Food">
+                    <h3>🥗 Healthy Food</h3>
+                </div>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fast-food">Fast Food</button>
+                <button class="filter-btn" data-filter="bakery">Bakery</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+                <button class="filter-btn" data-filter="healthy">Healthy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular / Featured Items Module -->
+    <section id="popular" class="section">
+        <div class="container">
+            <h2>Popular Items</h2>
+            <div class="items-grid">
+               
+                <!-- Repeat for 7 more items -->
+                <div class="item-card">
+                    <img src="images/piza.jpeg" alt="Pizza">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Cheesy delight with pepperoni.</p>
+                    <span class="price">$12.99</span>
+                    <div class="rating">★★★★★</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <img src="images/bakery.jpeg" alt="Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich and moist chocolate cake.</p>
+                    <span class="price">$5.99</span>
+                    <div class="rating">★★★★☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <img src="images/healthy 3.png" alt="Salad">
+                    <h3>Garden Salad</h3>
+                    <p>Fresh veggies with dressing.</p>
+                    <span class="price">$7.99</span>
+                    <div class="rating">★★★★★</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <img src="images/drinks1.jpeg" alt="Drink">
+                    <h3>Lemonade</h3>
+                    <p>Refreshing citrus drink.</p>
+                    <span class="price">$3.99</span>
+                    <div class="rating">★★★★☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <img src="images/fries.jpeg" alt="Fries">
+                    <h3>French Fries</h3>
+                    <p>Crispy golden fries.</p>
+                    <span class="price">$4.99</span>
+                    <div class="rating">★★★★★</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="item-card">
+                    <img src="images/iceream.jpeg" alt="Ice Cream">
+                    <h3>Vanilla Ice Cream</h3>
+                    <p>Creamy vanilla delight.</p>
+                    <span class="price">$4.49</span>
+                    <div class="rating">★★★★☆</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef’s Special Module -->
+   <!-- Chef’s Special / Today’s Dish Module -->
+<section id="chefs-special" class="section">
+    <div class="container">
+        <h2>Chef’s Special</h2>
+        <div class="special-card">
+            <div class="ribbon">Chef’s Special</div>
+            <img src="images/grilled.jpeg" alt="Grilled Salmon" class="special-img">  <!-- ← Yahan new src daal do -->
+            <h3>Grilled Salmon</h3>
+            <span class="price">$19.99</span>
+            <a href="#" class="cta-btn">Order Now</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Special Offers & Deals Module -->
+    <section id="offers" class="section parallax">
+        <div class="container">
+            <h2>Special Offers</h2>
+            <div class="offers-carousel">
+                <div class="offer-card">
+                    <img src="images/family.jpeg" alt="Combo Meal">
+                    <h3>Family Combo</h3>
+                    <p>20% Off - Limited Time!</p>
+                    <div class="countdown">Ends in: <span id="countdown1">10:00</span></div>
+                </div>
+                <div class="offer-card">
+                    <img src="images/discount.jpeg" alt="Discount">
+                    <h3>Student Discount</h3>
+                    <p>15% Off with ID</p>
+                    <div class="countdown">Ends in: <span id="countdown2">05:00</span></div>
+                </div>
+                <div class="offer-card">
+                    <img src="images/deal.jpeg" alt="Deal">
+                    <h3>Buy 1 Get 1 Free</h3>
+                    <p>On Desserts</p>
+                    <div class="countdown">Ends in: <span id="countdown3">02:00</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Module -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Food Gallery</h2>
+            <div class="gallery-grid">
+                <img src="images/fastfood1.jpeg" alt="Food1" data-category="fast-food">
+                <img src="images/bakery.jpeg" alt="Food2" data-category="bakery">
+                <img src="images/drinks1.jpeg" alt="Food3" data-category="drinks">
+                <img src="images/healthy 3.png" alt="Food4" data-category="healthy">
+                <img src="images/fries.jpeg" alt="Food5" data-category="fast-food">
+                <img src="images/bakery.jpeg" alt="Food6" data-category="bakery">
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fast-food">Fast Food</button>
+                <button class="filter-btn" data-filter="bakery">Bakery</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+                <button class="filter-btn" data-filter="healthy">Healthy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Module -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-carousel">
+                <div class="review-card">
+                    <img src="images/review1 (1).jpeg" alt="User1">
+                    <h3>John Doe</h3>
+                    <div class="rating">★★★★★</div>
+                    <p>Amazing food and fast delivery!</p>
+                </div>
+                <div class="review-card">
+                    <img src="images/review2.jpeg" alt="User2">
+                    <h3>Jane Smith</h3>
+                    <div class="rating">★★★★☆</div>
+                    <p>Delicious desserts, highly recommend.</p>
+                </div>
+                <div class="review-card">
+                    <img src="images/review3.jpeg" alt="User3">
+                    <h3>Mike Johnson</h3>
+                    <div class="rating">★★★★★</div>
+                    <p>Best healthy options in town.</p>
+                </div>
+                <div class="review-card">
+                    <img src="https://via.placeholder.com/100?text=User4" alt="User4">
+                    <h3>Emily Davis</h3>
+                    <div class="rating">★★★★★</div>
+                    <p>Great deals and tasty meals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Newsletter Module -->
+    <section id="newsletter" class="section">
+        <div class="container">
+            <h2>Subscribe to Newsletter</h2>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit" class="cta-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Reservation Module -->
+    <section id="reservation" class="section">
+        <div class="container">
+            <h2>Book a Table</h2>
+            <form class="reservation-form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="date" placeholder="Date">
+                <input type="time" placeholder="Time">
+                <input type="number" placeholder="Guests" min="1">
+                <button type="submit" class="cta-btn">Reserve Now</button>
+            </form>
+            <div id="confirmation" style="display:none;">Reservation Confirmed!</div>
+        </div>
+    </section>
+
+    <!-- Footer Module -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-info">
+                <p>Phone: +123-456-7890</p>
+                <p>Email: info@foodhub.com</p>
+                <p>Location: 123 Food Street, City</p>
+            </div>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="quick-links">
+                <a href="#hero">Home</a>
+                <a href="#categories">Menu</a>
+                <a href="#offers">Offers</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+
+/* styles.css */
+
+/* Color Scheme */
+:root {
+    --primary: #FF4C29;
+    --secondary: #FFB347;
+    --accent: #FFD700;
+    --background: #FFF8F0;
+    --text: #333333;
+    --highlight: #FF6F61;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background: #1A1A1A;
+    --text: #FFFFFF;
+    --primary: #FF4C29;
+    --secondary: #FFB347;
+    --accent: #FFD700;
+}
+
+/* Fonts */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-btn {
+    font-family: 'Pacifico', cursive;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 8px solid var(--secondary);
+    border-top: 8px solid var(--primary);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Navbar */
+#navbar {
+    position: sticky;
+    top: 0;
+    background: transparent;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+#navbar.scrolled {
+    background: var(--primary);
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    color: var(--accent);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li a {
+    color: var(--text);
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+#dark-mode-toggle {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1920x800?text=Mouth-Watering+Food') no-repeat center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    animation: fadeIn 2s;
+}
+
+.animated-tagline {
+    font-size: 3rem;
+    animation: slideIn 1s;
+}
+
+.cta-buttons .cta-btn {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    background: var(--highlight);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+/* New Modern Hero Section */
+.hero-modern {
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D1 100%);
+    padding: 100px 0 80px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-left h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.highlight {
+    color: #FF4C29; /* orange */
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #555;
+    margin: 0 0 40px;
+    max-width: 500px;
+}
+
+.hero-right {
+    flex: 0 0 400px;
+    text-align: center;
+}
+
+.image-box {
+    width: 320px;
+    height: 320px;
+    background: #FF9500; /* bright orange box */
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(255, 76, 41, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.image-box img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+/* Buttons */
+.cta-btn {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.cta-btn.primary {
+    background: #FF4C29;
+    color: white;
+    border: none;
+}
+
+.cta-btn.primary:hover {
+    background: #E03E1E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 76, 41, 0.3);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: #FF4C29;
+    border: 2px solid #FF4C29;
+    margin-left: 20px;
+}
+
+.cta-btn.secondary:hover {
+    background: #FF4C29;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-left h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-right {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-left h1 {
+        font-size: 2.8rem;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .cta-btn.secondary {
+        margin-left: 0;
+    }
+}
+
+
+/* Parallax */
+.parallax {
+    background-attachment: fixed;
+}
+
+/* General Section */
+.section {
+    padding: 4rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem; /* Thoda zyada gap for better look */
+}
+
+.category-card {
+    background: white;
+    border-radius: 16px; /* Rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255,76,41,0.2);
+}
+
+.category-card img {
+    width: 100%;          /* Full width of card */
+    height: 180px;        /* Fixed height – adjust if needed (140px to 220px try karo) */
+    object-fit: contain;  /* ← Yeh change karo: cover ki jagah contain – full image dikhegi without crop */
+    object-position: center;
+    margin-bottom: 1rem;
+    padding: 10px;        /* Thoda padding taake border se door rahe */
+}
+
+.category-card h3 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.filter-tabs {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    background: var(--secondary);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Popular Items */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.item-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.item-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.add-to-cart {
+    background: var(--accent);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: var(--highlight);
+}
+
+/* Chef’s Special */
+.special-card img.special-img {
+    width: 100%;
+    height: 300px;               /* Adjust kar sakte ho 250-350px */
+    object-fit: contain;         /* Full image dikhegi, crop nahi */
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: #fff;            /* Agar background white chahiye */
+}
+
+.ribbon {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.special-card img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Offers Carousel */
+.offers-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+.offer-card img {
+    width: 100%;
+    height: 180px;               /* Ya 200px try karo */
+    object-fit: contain;         /* Important: full dikhegi */
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.offer-card:hover {
+    transform: flipY(180deg);
+}
+
+.offer-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.countdown {
+    color: var(--highlight);
+    font-weight: bold;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;               /* Adjust 180-250px */
+    object-fit: contain;         /* Full dikhegi */
+    border-radius: 12px;
+    transition: transform 0.3s;
+    background: #f9f9f9;         /* Light bg agar zaroorat ho */
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.08);
+}
+
+.gallery-filters {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Reviews Carousel */
+.reviews-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    animation: autoScroll 20s linear infinite;
+}
+
+.review-card {
+    min-width: 300px;
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.review-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes autoScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Blog */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.blog-card h3, .blog-card p {
+    padding: 0.5rem 1rem;
+}
+
+.read-more {
+    display: block;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.newsletter-form button:hover {
+    transform: scale(1.1);
+}
+
+/* Reservation */
+.reservation-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reservation-form input {
+    padding: 0.5rem;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+}
+
+.reservation-form button {
+    grid-column: span 2;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* Footer */
+#footer {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-info p {
+    margin: 0.5rem 0;
+}
+
+.social-icons a, .quick-links a {
+    color: white;
+    margin: 0.5rem;
+    text-decoration: none;
+}
+
+/* Back to Top */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: var(--text);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+#back-to-top.show {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .animated-tagline {
+        font-size: 2rem;
+    }
+}
